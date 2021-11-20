@@ -18,7 +18,7 @@ jobs:
           
       - uses: maxkomarychev/merge-pal-action@v0.5.1
         with:
-          token: ${{ secrets.MY_USER_TOKEN }}
+          token: ${{ secrets.MERGE_PAL }}
 
       - name: get changed files
         id: getfile
