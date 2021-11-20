@@ -15,6 +15,11 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 2
+          
+      - uses: maxkomarychev/merge-pal-action@vX.Y.Z
+        with:
+          token: ${{ secrets.MY_USER_TOKEN }}
+
       - name: get changed files
         id: getfile
         run: |
