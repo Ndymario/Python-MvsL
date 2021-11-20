@@ -1,7 +1,7 @@
 # Python-MvsL
 Project to port the New Super Mario Bros. DS game mode Mario Vs Luigi to Python
 
-Here's a class tree (don't mention they aren't classes lol, just tesing):
+Here's a generated image:
 
 ```mermaid
 classDiagram
