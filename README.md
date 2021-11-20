@@ -2,6 +2,8 @@
 Project to port the New Super Mario Bros. DS game mode Mario Vs Luigi to Python
 
 Some mermaid suff that should get rendered
+
+For real this time?
 ```mermaid
 graph LR
     A[README.md]
