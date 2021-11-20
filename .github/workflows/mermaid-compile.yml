@@ -40,6 +40,10 @@ jobs:
       - name: fetch
         run: |
           git fetch
+          
+      - name: pull
+        run: |
+          git pull
 
       - name: Commit files
         run: |
