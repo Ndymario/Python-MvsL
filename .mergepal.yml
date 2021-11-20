@@ -1,0 +1,6 @@
+whitelist:
+  - automated-pr
+blacklist:
+  - wip
+  - do-not-merge
+method: merge
