@@ -43,7 +43,7 @@ jobs:
           
       - name: pull
         run: |
-          git pull
+          git pull origin alpha
 
       - name: Commit files
         run: |
