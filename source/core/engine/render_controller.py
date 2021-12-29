@@ -9,16 +9,46 @@ Planned functions:
  - Sprite divider (take one image, and crate sprite objects with the image data. Reduces number of overall files needed)
 '''
 
+import json
+
 # Image instance: will handle loading and splitting the image as needed
 class Image():
     def __init__(self, image_path, name) -> None:
         self.image_path = image_path(image_path)
         self.name = name
 
-    # Function to load an image from a given path
-    def load_image(self, image_path):
-        # [TODO]
+    # Take the input image and generate a list of split images using the provided JSON file
+    def create_sheet(self, image_path, json_path):
+        # Store each SET in a Dictionary
+        set_dict = {}
+
+        # Try to open and parse the passed json file
+        try:
+            json_file = open(json_path, "r")
+        except(OSError):
+            pass
+
+        sheet_info = json.load(json_file)
+
+        # Fetch Sheet "meta data", then store it in a list
+        creator = sheet_info.get("creator")
+        name = sheet_info.get("name")
+        set_count = sheet_info.get("set_count")
+        border_color = sheet_info.get("border_color")
+        is_playable = sheet_info.get("is_playable")
+        has_sounds = sheet_info.get("has_sounds")
+        has_keys = sheet_info.get("has_keys")
+        meta_data = [creator, name, set_count, border_color, is_playable, has_sounds]
+
+        # Close the file when we're done
+        json_file.close()
         pass
+
+    # Function to load an image from a given path
+    def load_image(self, image_name):
+        # [TODO] Load image from given image path
+        pass
+
 
     # Print the image_path & name if print() is passed an Image
     def __str__(self) -> str:
