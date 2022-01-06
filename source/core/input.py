@@ -6,7 +6,7 @@ Descripion: File that will house input functions
 from raylibpy import KEY_LEFT_SHIFT, KEY_A, KEY_W, KEY_D, KEY_S, KEY_SPACE, get_key_pressed, is_key_down
 
 def function_name():
-    print("Test Function is in fact running :)");
+    print("Test Function is in fact running :)")
     return 2
 
 def do_sprint(player):
@@ -19,13 +19,13 @@ def move_right(player):
     player.adjust_speed(1)
 
 def look_up(player):
-    # player.y += player.speed;
+    # player.y += player.speed
     #print("up has yet to be implemented")
     pass
 
 def look_down(player):
     # TODO
-    # player.y -= player.speed;
+    # player.y -= player.speed
     pass
 
 def console():
