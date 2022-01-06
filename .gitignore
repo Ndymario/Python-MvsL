@@ -133,3 +133,6 @@ mvsl-python/
 
 # macOS
 .DS_Store
+
+#debug
+debug/

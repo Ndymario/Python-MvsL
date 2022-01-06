@@ -3,14 +3,14 @@ Authors: Nolan Y., Christopher D.
 Descripion: File that will house input functions
 '''
 
-from raylibpy import *
+from raylibpy import KEY_LEFT_SHIFT, KEY_A, KEY_W, KEY_D, KEY_S, KEY_SPACE, get_key_pressed, is_key_down
 
 def function_name():
     print("Test Function is in fact running :)");
     return 2
 
 def do_sprint(player):
-    player.acceleration = .5;
+    player.acceleration = .5
 
 def move_left(player):
     player.adjust_speed(-1)

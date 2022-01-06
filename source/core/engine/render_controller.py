@@ -14,7 +14,7 @@ import json
 # Image instance: will handle loading and splitting the image as needed
 class Image():
     def __init__(self, image_path, name) -> None:
-        self.image_path = image_path(image_path)
+        self.image_path = image_path
         self.name = name
 
     # Take the input image and generate a list of split images using the provided JSON file

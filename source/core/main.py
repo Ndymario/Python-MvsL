@@ -3,10 +3,9 @@ Authors: Nolan Y.
 Descripion: The (you guessed it) main file that gets ran for running Python MvsL
 '''
 
-# Import using * to we don't need to use "raylibpy." every time we wnt to do something
-from raylibpy import *
-from input import *
-from player import *
+from raylibpy import init_window, set_target_fps, window_should_close, begin_drawing, clear_background, RAYWHITE, end_drawing, close_window
+from input import console, parse_inputs, detect_input
+from player import Player
 
 # controls = player_inputs 
 
