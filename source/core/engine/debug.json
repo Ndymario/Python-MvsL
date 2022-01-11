@@ -44,9 +44,9 @@
         "skid":{
             "x_start":0,
             "y_start":0,
+            "border": [{"width":20, "height":20}],
             "width":20,
             "height":20,
-            "origin":[{"x":10, "y":10}],
             "frames":1,
             "loops":false,
             "key":["skid"],
