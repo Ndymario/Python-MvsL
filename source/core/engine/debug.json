@@ -7,10 +7,52 @@
     "has_sounds":true,
     "has_keys":false,
     "sets":{
-        "idle":{"x_start":0, "y_start":0, "border":[{"width":20, "height":20}], "origin":[{"x":10, "y":10}], "frames":1, "loops":false, "key":null, "combine_keys":false, "sounds":null},
-        "run":{"x_start":0, "y_start":0, "width":20, "height":20, "origin":[{"x":10, "y":10}], "frames":3, "loops":true, "key":["left", "right"], "combine_keys":false, "sounds":"run"},
-        "jump":{"x_start":0, "y_start":0, "width":20, "height":20, "origin":[{"x":10, "y":10}], "frames":5, "loops":false, "key":["jump"], "combine_keys":false, "sounds":"jump"},
-        "skid":{"x_start":0, "y_start":0, "width":20, "height":20, "origin":[{"x":10, "y":10}], "frames":1, "loops":false, "key":["skid"], "combine_keys":false, "sounds":"skid"}
+        "idle":{
+            "x_start":0,
+            "y_start":0,
+            "border": [{"width":20, "height":20}], 
+            "frames":1, 
+            "loops":false, 
+            "key":null, 
+            "combine_keys":false, 
+            "sounds":null
+        },
+        "run":{
+            "x_start":0,
+            "y_start":0,
+            "border": [{"width":20, "height":20}, {"width":20, "height":20}, {"width":20, "height":20}], 
+            "width":20,
+            "height":20,
+            "frames":3,
+            "loops":true,
+            "key":["left", "right"],
+            "combine_keys":false,
+            "sounds":"run"
+        },
+        "jump":{
+            "x_start":0,
+            "y_start":0,
+            "border": [{"width":20, "height":20}, {"width":20, "height":20}, {"width":20, "height":20}, {"width":20, "height":20}, {"width":20, "height":20}],
+            "width":20,
+            "height":20,
+            "frames":5,
+            "loops":false,
+            "key":["jump"],
+            "combine_keys":false,
+            "sounds":"jump"
+        },
+        "skid":{
+            "x_start":0,
+            "y_start":0,
+            "width":20,
+            "height":20,
+            "origin":[{"x":10, "y":10}],
+            "frames":1,
+            "loops":false,
+            "key":["skid"],
+            "combine_keys":false,
+            "sounds":"skid"
+        }
     },
     "sound_set":{
         "jump":"sounds/mario_jump.mp3"
