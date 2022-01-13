@@ -22,27 +22,32 @@ class Image():
         # Store each SET in a Dictionary
         set_dict = {}
 
+        # Flags to determine where the import fails
+        incorrect_meta_data = False
+
         # Try to open and parse the passed json file
-        try:
-            json_file = open(json_path, "r")
-        except(OSError):
-            pass
+        with open(json_path, "r") as file:
+            sheet_info = json.load(file)
 
-        sheet_info = json.load(json_file)
+            # Fetch Sheet "meta data", then store it in a list
+            creator = sheet_info.get("creator")
+            name = sheet_info.get("name")
+            set_count = sheet_info.get("set_count")
+            border_color = sheet_info.get("border_color")
+            is_playable = sheet_info.get("is_playable")
+            has_sounds = sheet_info.get("has_sounds")
+            has_keys = sheet_info.get("has_keys")
+            meta_data = [creator, name, set_count, border_color, is_playable, has_sounds, has_keys]
 
-        # Fetch Sheet "meta data", then store it in a list
-        creator = sheet_info.get("creator")
-        name = sheet_info.get("name")
-        set_count = sheet_info.get("set_count")
-        border_color = sheet_info.get("border_color")
-        is_playable = sheet_info.get("is_playable")
-        has_sounds = sheet_info.get("has_sounds")
-        has_keys = sheet_info.get("has_keys")
-        meta_data = [creator, name, set_count, border_color, is_playable, has_sounds]
-
-        # Close the file when we're done
-        json_file.close()
-        pass
+            # All meta data should exist. If any part doesn't, mark a flag and abandon the import process
+            for data in meta_data:
+                if data == None:
+                    incorrect_meta_data = True
+        
+        if incorrect_meta_data:
+            return True
+        else:
+            return set_dict
 
     # Function to load an image from a given path
     def load_image(self, image_name):

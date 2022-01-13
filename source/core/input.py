@@ -9,21 +9,21 @@ def function_name():
     print("Test Function is in fact running :)")
     return 2
 
-def do_sprint(player):
-    player.acceleration = .5
+def do_sprint(entity):
+    entity.acceleration = .5
 
-def move_left(player):
-    player.adjust_speed(-1)
+def move_left(entity):
+    entity.adjust_speed(-1)
 
-def move_right(player):
-    player.adjust_speed(1)
+def move_right(entity):
+    entity.adjust_speed(1)
 
-def look_up(player):
+def look_up(entity):
     # player.y += player.speed
     #print("up has yet to be implemented")
     pass
 
-def look_down(player):
+def look_down(entity):
     # TODO
     # player.y -= player.speed
     pass
@@ -35,8 +35,8 @@ def console():
     print(int(key))
 
 
-def do_jump(player):
-    player.attempt_jump()
+def do_jump(entity):
+    entity.attempt_jump()
 
 class player_inputs:
     # A test class to test viability of setting functions to variables
@@ -68,10 +68,10 @@ def detect_input():
     return key_inputs
 
 # Processes the input number provided by detect_inputs() and runs each function associated with each key
-def parse_inputs(inputs: int,player):
+def parse_inputs(inputs: int,entity):
     for function in key_action:
         if (inputs & 1): 
-            function(player)
+            function(entity)
         inputs = inputs>>1
     # Move somewhere else later
-    player.acceleration = .2
+    entity.acceleration = .2
